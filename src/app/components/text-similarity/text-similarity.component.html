@@ -1,0 +1,19 @@
+<div>
+    <h3>Text Similarity page</h3>
+  
+    <div>
+      <form (submit)="checkTextSimilarity()" class="mb-5">
+        <div class="form-group mb-2">
+          <label for="name">First Text</label>
+          <input type="text" class="form-control" id="firstText" name="firstText" placeholder="firstText" [(ngModel)]="firstText">
+          <label for="name">Second Text</label>
+          <input type="text" class="form-control" id="secondText" name="secondText" placeholder="secondText" [(ngModel)]="secondText">
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Check Similarity</button>
+        <div>
+            <label>Text Similarity: {{similarity}}</label>
+        </div>
+      </form>
+    </div>
+  </div>
