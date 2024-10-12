@@ -12,7 +12,7 @@ export class TextSimilarityService {
 
   constructor(private httpClient : HttpClient) { }
 
-  checkTextSimilarity(firstText: string, secondText: string){
+  checkTextSimilarity(firstText: string, secondText: string): Observable<any>{
     const token = localStorage.getItem('token') || '';
     const params = new HttpParams().set('text1', firstText).set('text2', secondText).set('token', token);
     return this.httpClient.get(`${this.API_URL}/sim/v1`, {params});
