@@ -1,0 +1,7 @@
+<div>
+    <h3>History page</h3>
+
+    <div *ngFor="let call of calls">
+         [{{ call.timestamp | date:'dd.MM.yyyy. HH:mm:ss'}}] {{call.method | uppercase}} {{call.url}}
+    </div>
+</div>

@@ -21,6 +21,9 @@ export class AuthGuard implements CanActivate, CanDeactivate<unknown> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
+      if(typeof window === 'undefined') {
+        return false;
+      }
       const token = localStorage.getItem('token');
       if (token) {
         return true;

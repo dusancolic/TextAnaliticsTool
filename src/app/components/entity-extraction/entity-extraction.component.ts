@@ -44,7 +44,7 @@ export class EntityExtractionComponent {
         this.annotations.push({
           abstract: annotation.abstract,
           categories: annotation.categories,
-          image: annotation.image.full
+          image: annotation.image?.full
         });
       }
       console.log('Entities: ', response.annotations);

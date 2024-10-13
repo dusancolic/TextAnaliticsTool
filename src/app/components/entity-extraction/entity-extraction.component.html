@@ -1,7 +1,6 @@
 <div>
     <h3>Entity Extraction page</h3>
   
-   
     <div>
         <form (submit)="extractEntities()" class="mb-5">
           <div class="form-group mb-2">
@@ -15,21 +14,17 @@
             <input type="checkbox" [(ngModel)]="isAbstractChecked" name="abstract"> Abstract
             <br>
             <input type="checkbox" [(ngModel)]="isCategoriesChecked" name="categories"> Categories
-
         </div>
         <div *ngFor="let a of annotations">
             <div *ngIf="a.image">
                 <img [src]="a.image" alt="image" style="width:100px;height:100px;">
             </div>
-            <br>
             <div *ngIf="a.abstract">
                 <label><b>Abstract:</b> {{a.abstract}}</label>
             </div>
-            <br>
             <div *ngIf="a.categories">
                 <label><b>Categories:</b> {{a.categories}}</label>
             </div>
-            <br><br>
         </div>
     
           <button type="submit" class="btn btn-primary">Submit</button>
